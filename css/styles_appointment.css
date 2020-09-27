@@ -1,0 +1,502 @@
+/* Raleway font imported from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+/* global styling, set margin and padding to 0, all fonts are set to Raleway */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* remove underlines and other decorations from all anchor tags */
+a {
+  text-decoration: none;
+}
+
+/* header */
+header {
+  height: auto;
+  /* remove element from document flow by setting position to absolute */
+  position: absolute;
+  /* set to 100% width */
+  width: 100%;
+  /* send to front layer */
+  z-index: 1;
+  /* inner container to set margin */
+}
+
+header .container {
+  margin: 0 auto;
+  width: 95%;
+  /* increase top and bottom padding */
+  padding: 30px 0px;
+  /* flexible scaling on window resize */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* space between all child elements */
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* position items at the center */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* list items for navigation */
+  /* hamburger icon, only appears at mobile view */
+}
+
+header .container .logo {
+  /* 45% size of logo */
+}
+
+header .container .logo img {
+  width: 45%;
+}
+
+header .container nav .pages li {
+  /* set the list items side by side with padding at left and right by 20px */
+  display: inline;
+  padding: 0px 20px;
+  /* change colour of hyperlinks and set smooth transition to all changes on hover */
+  /* change colour when mouse hovers on the link */
+}
+
+header .container nav .pages li a {
+  color: #000;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+header .container nav .pages li a:hover {
+  color: #ffd92e;
+}
+
+header .container .open-side {
+  /* remove from display */
+  display: none;
+  color: #000;
+  /* increase fotn size */
+  font-size: 24px;
+  /* set text position at the center */
+  text-align: center;
+  /* set a 2px border with yellow colour */
+  border: 2px solid #ffd92e;
+  /* 50px border-radius will make the element look circular */
+  border-radius: 50px;
+  padding: 10px 15px;
+}
+
+/* sidebar, only for mobile view, appears from the left when hamburger icon is clicked, inline styline applied at the document */
+.sidebar {
+  position: absolute;
+  /* width will be 70% of the user's device width */
+  width: 70vw;
+  /* black background */
+  background: #000;
+  /* height of sidebar will be 100% of device width */
+  height: 100vh;
+  /* set on top of the stack */
+  z-index: 2;
+  text-align: center;
+  /* set a white border on the right */
+  border-right: 2px solid white;
+  -webkit-transition: .5s;
+  transition: .5s;
+  /* remove from display */
+  display: none;
+  /* copy the page links from the main header */
+  /* appointment link for mobile */
+}
+
+.sidebar nav .pages {
+  list-style-type: none;
+  margin-top: 50px;
+}
+
+.sidebar nav .pages li {
+  padding: 0px 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.sidebar nav .pages a {
+  color: #ffd92e;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.sidebar #make-an-app {
+  padding: 10px;
+  background: #000;
+  color: #ffd92e;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-size: 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+/* display the content as flexible and align at center */
+.welcome-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* sidebar takes up 15% of the width of the whole screen  */
+  /* this section is the one that takes up the rest of the element's width */
+}
+
+.welcome-user .select {
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+  background: #000;
+  /* height depends on the window size of the user */
+  height: 100vh;
+  /* display the sidebar ad a table to center the ul element */
+  display: table;
+}
+
+.welcome-user .select ul {
+  /* remove bullet points */
+  list-style-type: none;
+  text-align: center;
+  /* align this element vertically at the middle of the sidebar */
+  display: table-cell;
+  vertical-align: middle;
+  /* change colour, size and padding */
+  /* on hover, transform cursor to a pointer */
+  /* change colour to white and paply transition */
+  /* on hover, change colour */
+}
+
+.welcome-user .select ul li {
+  color: #fff;
+  font-size: 20px;
+  padding: 15px 0px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  cursor: pointer;
+}
+
+.welcome-user .select ul a {
+  color: #fff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.welcome-user .select ul li:hover, .welcome-user .select ul a:hover {
+  color: #ffd92e;
+}
+
+.welcome-user .select-content {
+  -ms-flex-preferred-size: 85%;
+      flex-basis: 85%;
+  /* when user has logged in, display dashboard and welcome message */
+  /* this is the section which is in default set to no display, this is where the user can book an appointment */
+  /* log out button, only shown in mobile view so by default it is hidden */
+}
+
+.welcome-user .select-content #dashboard {
+  /* center the text and position of the content */
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* increase the font size of the subheading to 72 pixels to be easily seen */
+  /* this section contains the results returned by the query from the database */
+}
+
+.welcome-user .select-content #dashboard h2 {
+  font-size: 72px;
+  margin-bottom: 10px;
+}
+
+.welcome-user .select-content #dashboard p {
+  font-size: 18px;
+}
+
+.welcome-user .select-content #dashboard .bookings {
+  margin: 0px 50px;
+  /* set margin top and bottom and increase font size */
+  /* center the element by setting left and margin to auto */
+}
+
+.welcome-user .select-content #dashboard .bookings h2 {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  font-size: 48px;
+}
+
+.welcome-user .select-content #dashboard .bookings .fetch {
+  margin: 0px auto;
+  width: 90%;
+  /* set text alignment to the left */
+  text-align: left;
+}
+
+.welcome-user .select-content #dashboard .bookings .fetch .results {
+  text-align: center;
+  /* remove bullet points on the ul element */
+}
+
+.welcome-user .select-content #dashboard .bookings .fetch .results ul {
+  list-style-type: none;
+}
+
+.welcome-user .select-content #dashboard .bookings .fetch .results ul li {
+  margin-bottom: 20px;
+  /* the last paragraph sibling will change colour */
+}
+
+.welcome-user .select-content #dashboard .bookings .fetch .results ul li p {
+  font-size: 24px;
+}
+
+.welcome-user .select-content #dashboard .bookings .fetch .results ul li p:last-child {
+  color: #ffd92e;
+}
+
+.welcome-user .select-content #none {
+  display: none;
+  /* place the elements at the center of the container */
+}
+
+.welcome-user .select-content #none .appointments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* place where the flex elements start from */
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  /* margin at left and right */
+}
+
+.welcome-user .select-content #none .appointments .make-appointments {
+  margin: 0px 50px;
+}
+
+.welcome-user .select-content #none .appointments .make-appointments .app-text {
+  margin-bottom: 10px;
+  text-align: center;
+  /* set subheading size to 30 pixels and put spacing underneath */
+  /* this is the form itself */
+}
+
+.welcome-user .select-content #none .appointments .make-appointments .app-text h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.welcome-user .select-content #none .appointments .make-appointments .app-text #book-an-appointment {
+  /* style the submit button for the form */
+  /* when mouse hovers on the submit button, change colour to yellow */
+}
+
+.welcome-user .select-content #none .appointments .make-appointments .app-text #book-an-appointment .app {
+  padding-bottom: 20px;
+  position: relative;
+  width: 500px;
+  /* style the input fields of the form */
+  /* error message, place inside the input field on the left when there is an error with the input from the user */
+}
+
+.welcome-user .select-content #none .appointments .make-appointments .app-text #book-an-appointment .app input {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  text-align: center;
+  /* border radius gives a smoother edge */
+  border-radius: 10px;
+  outline: 0;
+}
+
+.welcome-user .select-content #none .appointments .make-appointments .app-text #book-an-appointment .app small {
+  position: absolute;
+  top: 22px;
+  left: 15px;
+  /* by default, hide */
+  display: none;
+  color: #ffd92e;
+}
+
+.welcome-user .select-content #none .appointments .make-appointments .app-text #book-an-appointment input[type='submit'] {
+  background: #000;
+  color: #fff;
+  /* width of submit button depends on the size of the container */
+  width: 100%;
+  border: 1px solid black;
+  padding: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  outline: 0;
+  cursor: pointer;
+}
+
+.welcome-user .select-content #none .appointments .make-appointments .app-text #book-an-appointment input[type='submit']:hover {
+  color: #ffd92e;
+}
+
+.welcome-user .select-content .log-out {
+  display: none;
+  margin: 100px auto 0px;
+  width: 100%;
+  text-align: center;
+  /* log out button styles */
+}
+
+.welcome-user .select-content .log-out a {
+  color: #000;
+  border: 1px solid black;
+  padding: 20px 30px;
+  border-radius: 10px;
+  /* uppercase texts */
+  text-transform: uppercase;
+}
+
+/* on mobile phone view, use these styles */
+@media (max-width: 480px) {
+  header {
+    /* inner container decreases in width */
+  }
+  header .container {
+    width: 85%;
+    /* hide navigation and appointment links */
+    /* show hamburger button */
+  }
+  header .container .logo {
+    /* bigger logo size */
+  }
+  header .container .logo img {
+    width: 55%;
+  }
+  header .container nav {
+    display: none;
+  }
+  header .container #make-an-app {
+    display: none;
+  }
+  header .container .open-side {
+    display: block;
+  }
+  /* show sidebar */
+  .sidebar {
+    display: block;
+  }
+  /* change positioning for mobile view */
+  .welcome-user {
+    /* hide the sidebar */
+    /* apply spacing at the top and bottom of the element */
+  }
+  .welcome-user .select {
+    display: none;
+  }
+  .welcome-user .select-content {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 150px 0px;
+    /* reveal the form */
+    /* show the log out button */
+  }
+  .welcome-user .select-content #dashboard {
+    margin: 0px;
+    /* decrease font size of subheading and apply circular corners of the border */
+    /* hide the paragraph */
+  }
+  .welcome-user .select-content #dashboard h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #ffd92e;
+    background: #000;
+    padding: 15px 20px;
+    border-radius: 50px;
+  }
+  .welcome-user .select-content #dashboard p {
+    display: none;
+  }
+  .welcome-user .select-content #dashboard .bookings {
+    margin: 0px;
+    /* remove the background and border of the subheading */
+    /* center the text outputted from the database */
+  }
+  .welcome-user .select-content #dashboard .bookings h2 {
+    font-size: 30px;
+    color: #000;
+    background: none;
+    border: none;
+    margin-bottom: 5px;
+  }
+  .welcome-user .select-content #dashboard .bookings .fetch .results {
+    text-align: center;
+    /* apply a 15-pixel margin at the bottom for the list items */
+  }
+  .welcome-user .select-content #dashboard .bookings .fetch .results ul li {
+    margin-bottom: 15px;
+    /*  */
+  }
+  .welcome-user .select-content #dashboard .bookings .fetch .results ul li p {
+    display: block;
+    font-size: 20px;
+  }
+  .welcome-user .select-content #none {
+    display: block;
+    margin-top: 30px;
+  }
+  .welcome-user .select-content #none .appointments {
+    /* decrease subheading text */
+  }
+  .welcome-user .select-content #none .appointments h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .welcome-user .select-content #none .appointments .make-appointments {
+    margin: 0px;
+  }
+  .welcome-user .select-content #none .appointments .make-appointments .app-text #book-an-appointment {
+    /* change font size  */
+    /* change background color and text color of the submit button on hover */
+  }
+  .welcome-user .select-content #none .appointments .make-appointments .app-text #book-an-appointment .app {
+    width: 100%;
+    /* change positioning of the error message */
+  }
+  .welcome-user .select-content #none .appointments .make-appointments .app-text #book-an-appointment .app input {
+    margin-bottom: 5px;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  .welcome-user .select-content #none .appointments .make-appointments .app-text #book-an-appointment .app small {
+    top: 30px;
+  }
+  .welcome-user .select-content #none .appointments .make-appointments .app-text #book-an-appointment input[type='submit'] {
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  .welcome-user .select-content #none .appointments .make-appointments .app-text #book-an-appointment input[type='submit']:hover {
+    background: #fff;
+    color: #000;
+  }
+  .welcome-user .select-content .log-out {
+    display: block;
+  }
+}
+
+/* end of styles for the appointments page */
+/*# sourceMappingURL=styles_appointment.css.map */

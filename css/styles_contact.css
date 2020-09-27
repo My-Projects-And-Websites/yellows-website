@@ -1,0 +1,565 @@
+/* Raleway font imported from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+/* global styling, set margin and padding to 0, all fonts are set to Raleway */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* remove underlines and other decorations from all anchor tags */
+a {
+  text-decoration: none;
+}
+
+/* header */
+header {
+  height: auto;
+  /* remove element from document flow by setting position to absolute */
+  position: absolute;
+  /* set to 100% width */
+  width: 100%;
+  /* send to front layer */
+  z-index: 1;
+  /* inner container to set margin */
+}
+
+header .container {
+  margin: 0 auto;
+  width: 95%;
+  /* increase top and bottom padding */
+  padding: 30px 0px;
+  /* flexible scaling on window resize */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* space between all child elements */
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* position items at the center */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* to avoid the navigation links to merge with background color, place a white background */
+  /* on hover, change element opacity to 0.7 */
+  /* hamburger icon, only appears at mobile view */
+}
+
+header .container .logo {
+  /* 45% size of logo */
+}
+
+header .container .logo img {
+  width: 45%;
+}
+
+header .container nav {
+  background: #fff;
+  padding: 10px 0px;
+  border-radius: 10px;
+  padding: 10px;
+  /* list items for navigation */
+}
+
+header .container nav .pages li {
+  /* set the list items side by side with padding at left and right by 20px */
+  display: inline;
+  padding: 0px 20px;
+  /* change colour of hyperlinks and set smooth transition to all changes on hover */
+  /* change colour when mouse hovers on the link */
+}
+
+header .container nav .pages li a {
+  color: #000;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+header .container nav .pages li a:hover {
+  color: #ffd92e;
+}
+
+header .container #make-an-app {
+  padding: 10px;
+  background: #000;
+  color: #ffd92e;
+  -webkit-transition: .5s;
+  transition: .5s;
+  /* remove border */
+  border: none;
+  /* remove sharp corners and round them by 10px */
+  border-radius: 10px;
+}
+
+header .container #make-an-app:hover {
+  opacity: 0.7;
+}
+
+header .container .open-side {
+  /* remove from display */
+  display: none;
+  color: #000;
+  /* increase fotn size */
+  font-size: 24px;
+  /* set text position at the center */
+  text-align: center;
+  /* set a 2px border with yellow colour */
+  border: 2px solid #ffd92e;
+  /* 50px border-radius will make the element look circular */
+  border-radius: 50px;
+  padding: 10px 15px;
+}
+
+/* sidebar, only for mobile view, appears from the left when hamburger icon is clicked, inline styline applied at the document */
+.sidebar {
+  position: absolute;
+  /* width will be 70% of the user's device width */
+  width: 70vw;
+  /* black background */
+  background: #000;
+  /* height of sidebar will be 100% of device width */
+  height: 100vh;
+  /* set on top of the stack */
+  z-index: 2;
+  text-align: center;
+  /* set a white border on the right */
+  border-right: 2px solid white;
+  -webkit-transition: .5s;
+  transition: .5s;
+  /* remove from display */
+  display: none;
+  /* copy the page links from the main header */
+  /* appointment link for mobile */
+}
+
+.sidebar nav .pages {
+  list-style-type: none;
+  margin-top: 50px;
+}
+
+.sidebar nav .pages li {
+  padding: 0px 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.sidebar nav .pages a {
+  color: #ffd92e;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.sidebar #make-an-app {
+  padding: 10px;
+  background: #000;
+  color: #ffd92e;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-size: 20px;
+  border-radius: 10px;
+  /* transforming content to uppercase letters */
+  text-transform: uppercase;
+}
+
+/* main content */
+main {
+  /* set a background image for the whole body */
+  background-image: url("../images/bg.png");
+  /* background image shall not repeat */
+  background-repeat: no-repeat;
+  /* background size to maintain resolution inside its container */
+  background-size: cover;
+}
+
+main .container {
+  margin: 0px auto;
+  padding: 150px 0px;
+  width: 80%;
+  /* flexible display */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* space between the child elements */
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* align the elements at the center */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* contact info */
+}
+
+main .container .form {
+  /* apply paddings at the left and right */
+  padding: 0px 50px;
+  /* apply styles to the form */
+}
+
+main .container .form .form-text {
+  /* apply padding top and bottom */
+  padding: 20px 0px;
+  /* change subheading color and font size */
+  /* change paragraph colour to white */
+}
+
+main .container .form .form-text h2 {
+  color: #ffd92e;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+main .container .form .form-text p {
+  color: #fff;
+  font-size: 18px;
+}
+
+main .container .form form {
+  margin: 25px 0px;
+  /* button styles */
+}
+
+main .container .form form .input-fields .inputs {
+  /* encase absolute positioned elements */
+  position: relative;
+  /* style the placeholder attribute */
+  /* error tag, this error message will only appear if the form inputs has errors in them */
+}
+
+main .container .form form .input-fields .inputs input {
+  /* apply styles to input fields */
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid white;
+  /* remove all outlines */
+  outline: 0;
+  /* sremove the background */
+  background: none;
+  color: #fff;
+}
+
+main .container .form form .input-fields .inputs input::-webkit-input-placeholder {
+  color: gainsboro;
+}
+
+main .container .form form .input-fields .inputs input:-ms-input-placeholder {
+  color: gainsboro;
+}
+
+main .container .form form .input-fields .inputs input::-ms-input-placeholder {
+  color: gainsboro;
+}
+
+main .container .form form .input-fields .inputs input::placeholder {
+  color: gainsboro;
+}
+
+main .container .form form .input-fields .inputs small {
+  position: absolute;
+  top: 22px;
+  right: 15px;
+  /* set to no display */
+  display: none;
+  color: #ffd92e;
+}
+
+main .container .form form .toggle-btn {
+  margin: 15px 0px;
+  /* toggle button, switch to register and login form */
+  /* increase left and right padding on hover */
+  /* style the submit button for both forms */
+  /* when hovering, increase padding anmd change its colour */
+}
+
+main .container .form form .toggle-btn #toggle_to_log, main .container .form form .toggle-btn #toggle_to_reg {
+  padding: 25px 40px;
+  /* set a 2 pixel border */
+  border: 2px solid #ffd92e;
+  /* transparent background */
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 20px;
+  outline: 0;
+  /* apply transition for smooth effect */
+  -webkit-transition: .4s;
+  transition: .4s;
+  /* transform cursor when user hovers over the button */
+  cursor: pointer;
+}
+
+main .container .form form .toggle-btn #toggle_to_log:hover, main .container .form form .toggle-btn #toggle_to_reg:hover {
+  padding: 25px 55px;
+}
+
+main .container .form form .toggle-btn input[type="submit"] {
+  /* remove default borders */
+  border: none;
+  padding: 30px 40px;
+  margin-left: 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  background: #ffd92e;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-transition: .4s;
+  transition: .4s;
+  cursor: pointer;
+}
+
+main .container .form form .toggle-btn input[type="submit"]:hover {
+  padding: 30px 55px;
+  color: #000;
+}
+
+main .container .contact {
+  /* padding at left and right */
+  padding: 0px 50px;
+  /* styling the unordered list element */
+  /* mail button */
+}
+
+main .container .contact .contact-text {
+  /* text sizes */
+}
+
+main .container .contact .contact-text h2 {
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+main .container .contact .contact-text p {
+  font-size: 18px;
+}
+
+main .container .contact .contact-info {
+  margin-top: 50px;
+  /* re-applying its default spacing */
+}
+
+main .container .contact .contact-info ul {
+  margin: 1em 0;
+  padding-left: 40px;
+  /* spacing underneath each list item and increase its size */
+}
+
+main .container .contact .contact-info ul li {
+  margin-bottom: 50px;
+  font-size: 26px;
+}
+
+main .container .contact .mail {
+  text-align: center;
+  padding: 15px 0px;
+  /* style the mail link */
+  /* on hover, apply these styles smoothly */
+}
+
+main .container .contact .mail a {
+  border: 1px solid white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  /* apply padding (inner spacing) to the mail link */
+  padding: 20px 30px;
+  /* set text colour to white */
+  color: #fff;
+  font-size: 18px;
+}
+
+main .container .contact .mail a:hover {
+  padding: 20px 50px;
+  color: #000;
+  border-color: #000;
+  border-radius: 15px;
+}
+
+/* footer */
+footer {
+  /* without padding, the footer will leave whitespace at the bottom */
+  padding: 40px 0px;
+  background: #000;
+  text-align: center;
+  /* set text color to white */
+  /* font awesome icons */
+  /* disclaimer text */
+}
+
+footer p {
+  color: #fff;
+}
+
+footer .social-media {
+  /* set opacity to 0.7 when mouse hovers over the icons */
+}
+
+footer .social-media .fa {
+  margin: 30px 0px;
+  padding: 0px 20px;
+  font-size: 24px;
+  width: 50px;
+  text-align: center;
+  /* remove all text decorations */
+  text-decoration: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+  color: #fff;
+}
+
+footer .social-media .fa:hover {
+  opacity: 0.7;
+}
+
+footer .disclaimer {
+  margin: 0px auto;
+  width: 85%;
+}
+
+/* on mobile phone view, use these styles */
+@media (max-width: 480px) {
+  header {
+    /* inner container decreases in width */
+  }
+  header .container {
+    width: 85%;
+    /* hide navigation and appointment links */
+    /* show hamburger button */
+  }
+  header .container .logo {
+    /* bigger logo size */
+  }
+  header .container .logo img {
+    width: 55%;
+  }
+  header .container nav {
+    display: none;
+  }
+  header .container #make-an-app {
+    display: none;
+  }
+  header .container .open-side {
+    display: block;
+  }
+  /* show sidebar */
+  .sidebar {
+    display: block;
+  }
+  /* style the main content for this page for mobile view */
+  main {
+    /* remove background image */
+    background-image: none;
+  }
+  main .container {
+    /* increase padding at the top */
+    padding: 150px 20px 20px;
+    width: 100%;
+    /* change direction of items, instead of a row make it a column */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    /* increase spacing for the contact info */
+  }
+  main .container .form {
+    padding: 0px 10px;
+    /* style the texts for the form in mobile view */
+    /* form styles for mobile view */
+  }
+  main .container .form .form-text {
+    padding: 10px 0px;
+  }
+  main .container .form .form-text h2 {
+    color: #ffd92e;
+    font-size: 30px;
+  }
+  main .container .form .form-text p {
+    color: #000;
+    font-size: 14px;
+  }
+  main .container .form form {
+    margin: 20px 0px;
+  }
+  main .container .form form .input-fields .inputs {
+    position: relative;
+    /* decrease radius of border */
+    /* lighten the grey colour of the placeholder */
+  }
+  main .container .form form .input-fields .inputs input {
+    /* decrease font size */
+    font-size: 14px;
+    border-radius: 5px;
+    border: 2px solid black;
+    color: #000;
+  }
+  main .container .form form .input-fields .inputs input::-webkit-input-placeholder {
+    color: gray;
+  }
+  main .container .form form .input-fields .inputs input:-ms-input-placeholder {
+    color: gray;
+  }
+  main .container .form form .input-fields .inputs input::-ms-input-placeholder {
+    color: gray;
+  }
+  main .container .form form .input-fields .inputs input::placeholder {
+    color: gray;
+  }
+  main .container .form form .toggle-btn {
+    margin: 10px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* decreasse original size of padding and font size */
+    /* increase border radius of the submit button */
+  }
+  main .container .form form .toggle-btn #toggle_to_log, main .container .form form .toggle-btn #toggle_to_reg {
+    padding: 15px 25px;
+    color: #ffd92e;
+    font-size: 14px;
+  }
+  main .container .form form .toggle-btn input[type="submit"] {
+    padding: 15px 25px;
+    font-size: 14px;
+    border-radius: 20px;
+  }
+  main .container .contact {
+    margin: 50px 0px;
+    padding: 0px 25px;
+    /* change padding of mail link */
+  }
+  main .container .contact .contact-text {
+    /* decrease font size of text */
+  }
+  main .container .contact .contact-text h2 {
+    font-size: 30px;
+  }
+  main .container .contact .contact-text p {
+    font-size: 14px;
+  }
+  main .container .contact .contact-info {
+    margin-top: 50px;
+  }
+  main .container .contact .contact-info ul {
+    /* decrease font size */
+  }
+  main .container .contact .contact-info ul li {
+    font-size: 18px;
+  }
+  main .container .contact .mail {
+    padding: 15px 0px;
+  }
+  main .container .contact .mail a {
+    border: 1px solid #000;
+    padding: 20px 30px;
+    color: #000;
+    border-radius: 15px;
+  }
+}
+
+/* end of styles for the contact page */
+/*# sourceMappingURL=styles_contact.css.map */

@@ -1,0 +1,552 @@
+/* Raleway font imported from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+/* global styling, set margin and padding to 0, all fonts are set to Raleway */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* remove underlines and other decorations from all anchor tags */
+a {
+  text-decoration: none;
+}
+
+/* header */
+header {
+  height: auto;
+  /* remove element from document flow by setting position to absolute */
+  position: absolute;
+  /* set to 100% width */
+  width: 100%;
+  /* send to front layer */
+  z-index: 1;
+  /* inner container to set margin */
+}
+
+header .container {
+  margin: 0 auto;
+  width: 95%;
+  /* increase top and bottom padding */
+  padding: 30px 0px;
+  /* flexible scaling on window resize */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* space between all child elements */
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* position items at the center */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* list items for navigation */
+  /* on hover, change element opacity to 0.7 */
+  /* hamburger icon, only appears at mobile view */
+}
+
+header .container .logo {
+  /* 45% size of logo */
+}
+
+header .container .logo img {
+  width: 45%;
+}
+
+header .container nav .pages li {
+  /* set the list items side by side with padding at left and right by 20px */
+  display: inline;
+  padding: 0px 20px;
+  /* change colour of hyperlinks and set smooth transition to all changes on hover */
+  /* change colour when mouse hovers on the link */
+}
+
+header .container nav .pages li a {
+  color: #000;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+header .container nav .pages li a:hover {
+  color: #ffd92e;
+}
+
+header .container #make-an-app {
+  padding: 10px;
+  background: #000;
+  color: #ffd92e;
+  -webkit-transition: .5s;
+  transition: .5s;
+  /* remove border */
+  border: none;
+  /* remove sharp corners and round them by 10px */
+  border-radius: 10px;
+}
+
+header .container #make-an-app:hover {
+  opacity: 0.7;
+}
+
+header .container .open-side {
+  /* remove from display */
+  display: none;
+  color: #000;
+  /* increase fotn size */
+  font-size: 24px;
+  /* set text position at the center */
+  text-align: center;
+  /* set a 2px border with yellow colour */
+  border: 2px solid #ffd92e;
+  /* 50px border-radius will make the element look circular */
+  border-radius: 50px;
+  padding: 10px 15px;
+}
+
+/* sidebar, only for mobile view, appears from the left when hamburger icon is clicked, inline styline applied at the document */
+.sidebar {
+  position: absolute;
+  /* width will be 70% of the user's device width */
+  width: 70vw;
+  /* black background */
+  background: #000;
+  /* height of sidebar will be 100% of device width */
+  height: 100vh;
+  /* set on top of the stack */
+  z-index: 2;
+  text-align: center;
+  /* set a white border on the right */
+  border-right: 2px solid white;
+  -webkit-transition: .5s;
+  transition: .5s;
+  /* remove from display */
+  display: none;
+  /* copy the page links from the main header */
+  /* appointment link for mobile */
+}
+
+.sidebar nav .pages {
+  list-style-type: none;
+  margin-top: 50px;
+}
+
+.sidebar nav .pages li {
+  padding: 0px 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.sidebar nav .pages a {
+  color: #ffd92e;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.sidebar #make-an-app {
+  padding: 10px;
+  background: #000;
+  color: #ffd92e;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-size: 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+/* main content of the page */
+main {
+  /* set items to center regardless of window size, flexible scaling */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* top and bottom padding */
+  padding: 150px 0px;
+  /* container for the carousel slideshow */
+}
+
+main .about-us {
+  /* encase all absolute elements */
+  position: relative;
+  /* styling the timeline */
+  /* this is the line on the middle */
+}
+
+main .about-us .intro {
+  text-align: center;
+  margin: 0px auto;
+  width: 80%;
+}
+
+main .about-us .intro h2 {
+  /* set subehading font size to 48px */
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #ffd92e;
+}
+
+main .about-us .intro p {
+  font-size: 18px;
+}
+
+main .about-us .timeline {
+  position: relative;
+  margin: 45px auto;
+  width: 80%;
+  /* list items contains the date and content of the company's stroy */
+  /* list item elements that are odd numbers, place them on the left and set text alignment to right */
+  /* right text alignment makes it easier to read */
+  /* list items that are even numbers, place them on the right and set text alignment to left */
+  /* creating an HTMl element for the odd-numbered elements using CSS, creates the dots that aligns witht he position of the date */
+  /* creating an HTMl element for the odd-numbered elements using CSS, creates the dots that aligns witht he position of the date */
+}
+
+main .about-us .timeline ul li {
+  list-style-type: none;
+  position: relative;
+  /* every element is set to half of its size */
+  width: 50%;
+  padding: 20px 40px;
+}
+
+main .about-us .timeline ul li .time {
+  /* set colour to yellow and apply bottom margin */
+}
+
+main .about-us .timeline ul li .time h2 {
+  color: #ffd92e;
+  margin-bottom: 20px;
+}
+
+main .about-us .timeline ul li .content {
+  /* set font size to 20px and apply margin */
+  /* apply spacing between paragraph lines */
+}
+
+main .about-us .timeline ul li .content h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+main .about-us .timeline ul li .content p {
+  line-height: 1.5;
+}
+
+main .about-us .timeline ul li:nth-child(odd) {
+  left: 1.1px;
+  text-align: right;
+}
+
+main .about-us .timeline ul li:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+main .about-us .timeline ul li:nth-child(odd)::before {
+  /* no content */
+  content: '';
+  position: absolute;
+  top: 24px;
+  right: -9px;
+  /* small width and height to suit stylings */
+  width: 20px;
+  height: 20px;
+  background: #ffd92e;
+  /* circular shape */
+  border-radius: 50%;
+}
+
+main .about-us .timeline ul li:nth-child(even)::before {
+  /* no content */
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: -9px;
+  /* small width and height to suit stylings */
+  width: 20px;
+  height: 20px;
+  background: #ffd92e;
+  /* circular shape */
+  border-radius: 50%;
+}
+
+main .about-us .timeline::before {
+  content: '';
+  position: absolute;
+  /* place it in the middle */
+  left: 50%;
+  width: 2px;
+  /* set height to 100% of the container */
+  height: 100%;
+  background: #000;
+}
+
+main .products .product-text {
+  text-align: center;
+  /* set width to 80% and leave spacing on the sides */
+  margin: 0px auto;
+  width: 80%;
+  /* font size for 48 pixels */
+  /* paragraph line spacing set to 1.5 */
+}
+
+main .products .product-text h2 {
+  font-size: 48px;
+  color: #ffd92e;
+  margin-bottom: 15px;
+}
+
+main .products .product-text p {
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+main .carousel-container {
+  margin: 50px auto;
+  width: 65%;
+  /* hide content that is overflowing on the container */
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  /* align the images at the center and place images side by side */
+  /* stylings for the previous and next buttons */
+  /* place previous button at the middle left */
+  /* place button at the middle right */
+  /* on hover, change colour smoothly */
+}
+
+main .carousel-container .carousel-slide {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* image size is 100% of the container and image is decreased to size to fit the container */
+}
+
+main .carousel-container .carousel-slide img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+main .carousel-container #prevBtn, main .carousel-container #nextBtn {
+  /* size of HTML entities are set to 36px with circular shape */
+  font-size: 36px;
+  padding: 25px 40px;
+  position: absolute;
+  /* place buttons at the middle */
+  top: 50%;
+  /* place at the top of the stack */
+  z-index: 2;
+  /* background colour set to greyish colour */
+  background: #1f1f1f;
+  color: #ffd92e;
+  border-radius: 50px;
+  /* remove border */
+  border: none;
+  outline: 0;
+  /* smooth transition when some of element properties changes - used for hover effect */
+  -webkit-transition: .5s;
+  transition: .5s;
+  /* set the center of the element at the center, not at the top left */
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  /* on hover, cursor transforms */
+  cursor: pointer;
+}
+
+main .carousel-container #prevBtn {
+  left: 5%;
+}
+
+main .carousel-container #nextBtn {
+  right: 5%;
+}
+
+main .carousel-container #prevBtn:hover, main .carousel-container #nextBtn:hover {
+  background: #fff;
+}
+
+/* footer */
+footer {
+  /* without padding, the footer will leave whitespace at the bottom */
+  padding: 40px 0px;
+  background: #000;
+  text-align: center;
+  /* set text color to white */
+  /* font awesome icons */
+  /* disclaimer text */
+}
+
+footer p {
+  color: #fff;
+}
+
+footer .social-media {
+  /* set opacity to 0.7 when mouse hovers over the icons */
+}
+
+footer .social-media .fa {
+  margin: 30px 0px;
+  padding: 0px 20px;
+  font-size: 24px;
+  width: 50px;
+  text-align: center;
+  /* remove all text decorations */
+  text-decoration: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+  color: #fff;
+}
+
+footer .social-media .fa:hover {
+  opacity: 0.7;
+}
+
+footer .disclaimer {
+  margin: 0px auto;
+  width: 85%;
+}
+
+/* on mobile phone view, use these styles */
+@media (max-width: 480px) {
+  header {
+    /* inner container decreases in width */
+  }
+  header .container {
+    width: 85%;
+    /* hide navigation and appointment links */
+    /* show hamburger button */
+  }
+  header .container .logo {
+    /* bigger logo size */
+  }
+  header .container .logo img {
+    width: 55%;
+  }
+  header .container nav {
+    display: none;
+  }
+  header .container #make-an-app {
+    display: none;
+  }
+  header .container .open-side {
+    display: block;
+  }
+  /* show sidebar */
+  .sidebar {
+    display: block;
+  }
+  /* main content styles for the mobile view */
+  main {
+    /* decrease spacing for the top and bottom of the carousel container */
+  }
+  main .about-us {
+    position: relative;
+    /* increase the width of the timeline */
+    /* remove the bar at the middle */
+  }
+  main .about-us .intro {
+    text-align: center;
+    /* place the element at the middle */
+    margin: 0px auto;
+    width: 85%;
+    /* decrease text sizes */
+  }
+  main .about-us .intro h2 {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+  main .about-us .intro p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  main .about-us .timeline {
+    margin: 45px auto;
+    width: 80%;
+    /* reset positioning of the list items */
+    /* remove dots from display */
+  }
+  main .about-us .timeline ul li {
+    width: 100%;
+    /* apply paddings to the li elements */
+    padding: 20px 10px;
+    /* decrease font size */
+  }
+  main .about-us .timeline ul li .time h2 {
+    color: #ffd92e;
+    margin-bottom: 7.5px;
+  }
+  main .about-us .timeline ul li .content h3 {
+    font-size: 18px;
+  }
+  main .about-us .timeline ul li .content p {
+    font-size: 14px;
+  }
+  main .about-us .timeline ul li:nth-child(odd) {
+    left: 0;
+    text-align: center;
+  }
+  main .about-us .timeline ul li:nth-child(even) {
+    left: 0;
+    text-align: center;
+  }
+  main .about-us .timeline ul li:nth-child(odd)::before {
+    display: none;
+  }
+  main .about-us .timeline ul li:nth-child(even)::before {
+    display: none;
+  }
+  main .about-us .timeline::before {
+    display: none;
+  }
+  main .products .product-text {
+    /* set text-alignment to center */
+    text-align: center;
+    margin: 0px auto;
+    width: 85%;
+    /* decrease font size */
+  }
+  main .products .product-text h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  main .products .product-text p {
+    font-size: 14px;
+  }
+  main .carousel-container {
+    margin: 50px auto -90px;
+    /* maximise width */
+    width: 100%;
+    /* remove smooth edges */
+    border-radius: 0;
+    /* decrease font size and padding for the buttons */
+    /* change button positions */
+  }
+  main .carousel-container #prevBtn, main .carousel-container #nextBtn {
+    font-size: 24px;
+    padding: 15px;
+  }
+  main .carousel-container #prevBtn {
+    left: 0;
+    border-radius: 0px 50px 50px 0px;
+  }
+  main .carousel-container #nextBtn {
+    right: 0;
+    border-radius: 50px 0px 0px 50px;
+  }
+}
+
+/* end of styles for the about page */
+/*# sourceMappingURL=styles_about.css.map */
